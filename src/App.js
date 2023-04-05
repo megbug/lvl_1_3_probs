@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Data from './components/Data.js';
+
+const toDoArr = [
+	{
+		elt: "send mail"
+	},
+	{
+		elt: "lvl_1_3"
+	},
+	{
+		elt: "eat tasty food"
+	}
+]
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<h1>my ToDo's</h1>
+			<Data
+				item={toDoArr[0].elt}
+			/>
+			<Data
+				item={toDoArr[1].elt}
+			/>
+			<Data
+				item={toDoArr[2].elt}
+			/>
+		</div>
+	);
 }
 
 export default App;
+
